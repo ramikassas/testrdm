@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global constraints to prevent horizontal scrolling on mobile */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    @apply bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 5px rgba(252, 211, 77, 0.5); }
+  50% { opacity: 0.8; box-shadow: 0 0 15px rgba(252, 211, 77, 0.8); }
+}
+
+.premium-badge-glow {
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+.premium-badge-glow-fast {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
